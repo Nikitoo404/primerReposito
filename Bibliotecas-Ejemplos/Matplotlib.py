@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
-nombres = ['A', 'B', 'C']
-valores = [1, 2, 3]
+nombres = ['LLA', 'Juntos por el cambio', 'Unión por la Patria']
+valores = [32.1, 20.9, 26.8]
 
 plt.bar(nombres, valores)
 plt.show()
