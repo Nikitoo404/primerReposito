@@ -6,3 +6,5 @@ valores = [29.86, 28, 27.28]
 plt.bar(nombres, valores)
 plt.show()
 
+#hace una tabla gráfica
+
