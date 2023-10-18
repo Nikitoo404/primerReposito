@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 #URL del sitio que deseo analizar
-url='https://wikileaks.org/'
+url='https://es.wikipedia.org/wiki/Wikipedia:Portada'
 
 respuesta=requests.get(url)
 #si en vez de poner la varible, pongo su contenido, es lo mismo.
