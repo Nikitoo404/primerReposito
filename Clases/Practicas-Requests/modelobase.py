@@ -54,4 +54,14 @@ class BaseDatos():
                         valor INTEGER
                         )
                     """)
-    
+    def encontrarTitulo(self,titulo):
+        tituloEncontrado=self.consultar(f"""
+               SELECT * FROM quinela WHERE nombre = '{titulo.text}'
+                """,cantidad=1)
+        if not tituloEncontrado:
+            self.actualizarBD(f"""
+                    INSERT INTO quinela (nombre) VALUES ('{titulo.text}') 
+                    """)
+            tituloEncontrado=self.consultar(f"""
+                SELECT * FROM quinela WHERE nombre = '{titulo.text}'
+                    """,cantidad=1)

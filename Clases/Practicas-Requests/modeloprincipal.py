@@ -25,21 +25,8 @@ for columna in columnas:
     #print("-----------------------------")
     titulo=columna.find('p')
 
-    tituloEncontrado=bd.consultar(f"""
-               SELECT * FROM quinela WHERE nombre = '{titulo.text}'
-                """,cantidad=1)
-
-
-
-    if not tituloEncontrado:
-        bd.actualizarBD(f"""
-                INSERT INTO quinela (nombre) VALUES ('{titulo.text}') 
-                """)
-        tituloEncontrado=bd.consultar(f"""
-               SELECT * FROM quinela WHERE nombre = '{titulo.text}'
-                """,cantidad=1)
-
-
+    tituloEncontrado=bd.encontrarTitulo(titulo.text)
+    
     print(tituloEncontrado[0])
 
 
