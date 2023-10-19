@@ -24,9 +24,7 @@ columnas=sopa.find_all('div', class_='columna')
 for columna in columnas:
     #print("-----------------------------")
     titulo=columna.find('p')
-
     tituloEncontrado=bd.encontrarTitulo(titulo.text)
-    
     print(tituloEncontrado[0])
 
 
